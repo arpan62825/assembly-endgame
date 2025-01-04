@@ -61,17 +61,17 @@ function App() {
     .toUpperCase()
     .split("")
     .map((letter, index) => {
-      const shouldRevealLetter = guessedLetters.includes(letter);
-      const shouldDisplayRemainingLetter = isGameLost && !shouldRevealLetter;
+      const isGuessed = guessedLetters.includes(letter);
+      const isRemainingLetter = isGameLost && !isGuessed;
 
       return (
         <span
           key={index}
           className={`w-10 h-10 bg-stone-700 flex justify-center items-center border-b-2 border-stone-300 text-white text-lg font-medium ${
-            shouldDisplayRemainingLetter ? "text-[#EC5D49]" : ""
+            isRemainingLetter ? "text-red-600" : ""
           }`}
         >
-          {shouldRevealLetter || shouldDisplayRemainingLetter ? letter : ""}
+          {isGuessed || isRemainingLetter ? letter : ""}
         </span>
       );
     });
