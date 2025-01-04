@@ -149,7 +149,7 @@ function App() {
       )}
       <section className="flex flex-col items-center gap-5">
         <section className="game-description text-slate-100  max-w-[350px] text-center">
-          <h1 className="text-2xl text-stone-200">Scratch: Endgame</h1>
+          <h1 className="text-2xl text-stone-200">Assembly: Endgame</h1>
           <p className="text-sm text-stone-400 opacity-80">
             Guess the word in under 8 attempts to keep the programming world
             safe from Assembly!
